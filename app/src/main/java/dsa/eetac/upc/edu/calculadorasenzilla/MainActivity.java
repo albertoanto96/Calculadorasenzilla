@@ -92,12 +92,14 @@ public class MainActivity extends AppCompatActivity {
                 sol.append(n2*n1);
             }
             if (op.equals("/")){
+                int i=n2%n1;
                 try {
                     sol.append(n2 / n1);
                 }
                 catch(Exception e){//detectamos si la solucion es infinita
                     Toast.makeText(getApplicationContext(),"Inifinit",Toast.LENGTH_LONG).show();
                 }
+                if (i!=0){Toast.makeText(getApplicationContext(),"El resultat dona decimals",Toast.LENGTH_LONG).show();}
 
             }
             result.setText(sol);
